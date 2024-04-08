@@ -1,0 +1,132 @@
+{%extends 'mucq/basic.htm'%}
+{% block title%}mucq{% endblock %}
+
+{% block body %}
+    {% load static %} 
+
+    
+
+      
+      <h1 style="margin-left: 4%; margin-top: 3%;">Trending now</h1>
+      
+ 
+      <div class="row g-4" style=" margin: 2%;">
+        
+        {% for i in song %}
+        <div class="col">
+          <div class="card h-100 w-100" >
+            <img src="media/{{i.image}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <div class="row" style="justify-content: space-between; ">
+                <div>
+                  <h5 class="card-title">{{i.name}}</h5>
+                <h6>{{i.singer}}</h6>
+                </div>
+                <a href="/mucq/songs/{{i.song_id}}" class="btn" style="position: absolute; left: 80%; bottom: 1%;">
+                  <img src="{% static 'mucq/play.png'%}" alt="play"/>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+        
+      </div>
+
+      <h1 style="margin-left: 4%; margin-top: 3%;">Your top playlists</h1>
+      
+ 
+      <div class="row g-4" style=" margin: 2%;">
+        <div class="col">
+          <div class="card h-100 w-100" >
+            <img src="{% static 'mucq/ag.jpeg'%}" class="card-img-top" alt="...">
+            <div class="card-body" style="align-self: center;">
+              <h5 class="card-title">Dance</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 w-100" >
+            <img src="{% static 'mucq/keshi.jpeg'%}" class="card-img-top" alt="...">
+            <div class="card-body" style="align-self: center;">
+              <h5 class="card-title">Hype</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 w-100" >
+            <img src="{% static 'mucq/rih.webp'%}" class="card-img-top" alt="...">
+            <div class="card-body" style="align-self: center;">
+              <h5 class="card-title">Workout</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 w-100" >
+            <img src="{% static 'mucq/bey.jpeg'%}" class="card-img-top" alt="...">
+            <div class="card-body" style="align-self: center;">
+              <h5 class="card-title">Dance</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 w-100" >
+            <img src="{% static 'mucq/james.webp'%}" class="card-img-top" alt="...">
+            <div class="card-body" style="align-self: center;">
+              <h5 class="card-title"><3</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 w-100" >
+            <img src="{% static 'mucq/ag.jpeg'%}" class="card-img-top" alt="...">
+            <div class="card-body" style="align-self: center;">
+              <h5 class="card-title"><3</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 w-100" >
+            <img src="{% static 'mucq/artist2.jpeg'%}" class="card-img-top" alt="...">
+            <div class="card-body" style="align-self: center;">
+              <h5 class="card-title"><3</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+ 
+
+      {% endblock %}
+
+
+      <!--
+
+              <div id="carouselExample" class="carousel slide " >
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" >
+            <img src="{% static 'mucq/ets.jpeg'%}"  class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'mucq/ets.jpeg'%}" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'mucq/ets.jpeg'%}" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      -->
